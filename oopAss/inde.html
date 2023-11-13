@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="con-for-btn-and-Stundent-Info">
+        <div class="mt-4">
+            <h2 class="text-center">Click button to get student Information</h2>
+        </div>
+        <button type="button" class="btn btn-primary w-25" onclick="show()">Show</button>
+        <div id="cardContainer" class="row mt-4"></div>
+    </div>
+    <script>
+        const show = () => {
+            class Student {
+                constructor(firstName, lastName, middleName, state, age, gender, email, course) {
+                    this.firstName = firstName,
+                        this.middleName = middleName,
+                        this.lastName = lastName,
+                        this.state = state,
+                        this.age = age,
+                        this.gender = gender,
+                        this.email = email,
+                        this.course = course
+                }
+            }
+
+            let stundent0ne = new Student('Mohamed', 'Said', 'yusuf', 'Ondo', '20', 'Male', 'mohamedsaid@gmail.com', 'Computer Science');
+            let stundentTwo = new Student('Bidemi', 'Olaoba', 'jesu', 'Oyo', '18', 'Male', 'BidemiOlaoba@gmail.com', 'Software Engineer');
+            let stundentThree = new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentFour= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentFive= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentSix= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentSeven= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentEight= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentNine= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentTen= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentEleven= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentTwelve= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentThirteen= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentfourteen= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentfivteen= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            arrayOfStundent = [stundent0ne, stundentTwo, stundentThree, stundentFour, stundentFive, stundentSix, stundentSeven, stundentEight, stundentNine, stundentTen, stundentEleven, stundentTwelve, stundentThirteen, stundentfourteen, stundentfivteen];
+
+            const cardContainer = document.getElementById('cardContainer');
+
+            arrayOfStundent.forEach((student, index) => {
+                cardContainer.innerHTML +=
+                    `
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 px-3">
+                <div class="card" style="width: 100%;">
+                    <img src="info.jpg" class="card-img-top" alt="studentInfoImg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Student Information</h5>
+                        <ul>
+                            <li>${index + 1}</li>
+                            <li>First Name: ${student.firstName}</li>
+                            <li>Middle Name: ${student.middleName}</li>
+                            <li>Last Name: ${student.lastName}</li>
+                            <li>State of Origin: ${student.state} State</li>
+                            <li>Age: ${student.age} years Old</li>
+                            <li>Gender: ${student.gender}</li>
+                            <li>Email: ${student.email}</li>
+                            <li>Course: ${student.course}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            `;
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class=" con-for-btn-and-Stundent-Info ">
+        <div class="mt-4">
+            <h2 class="text-center">Click button to get student Information</h2>
+        </div>
+        <button type="button" class="btn btn-primary w-25" onclick="show()">Show</button>
+        <div id="cardContainer" class=""></div>
+    </div>
+    <script>
+        const show = () => {
+            class Student {
+                constructor(firstName, lastName, middleName, state, age, gender, email, course) {
+                    this.firstName = firstName,
+                        this.middleName = middleName,
+                        this.lastName = lastName,
+                        this.state = state,
+                        this.age = age,
+                        this.gender = gender,
+                        this.email = email,
+                        this.course = course
+                }
+            }
+
+            let stundent0ne = new Student('Mohamed', 'Said', 'yusuf', 'Ondo', '20', 'Male', 'mohamedsaid@gmail.com', 'Computer Science');
+            let stundentTwo = new Student('Bidemi', 'Olaoba', 'jesu', 'Oyo', '18', 'Male', 'BidemiOlaoba@gmail.com', 'Software Engineer');
+            let stundentThree = new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentFour= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentFive= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentSix= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentSeven= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentEight= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentNine= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentTen= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentEleven= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentTwelve= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentThirteen= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentfourteen= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+            let stundentfivteen= new Student('Adeola', 'Deborah', 'jesu', 'Oyo', '18', 'Male', 'Adeoladeborah12a@gmail.com', 'Agricultural Science');
+
+            
+
+            arrayOfStundent = [];
+            arrayOfStundent.push(stundent0ne, stundentTwo, stundentThree,stundentFour,stundentFive,stundentSix,stundentSeven,stundentEight,stundentNine,stundentTen,stundentEleven,stundentTwelve,stundentThirteen,stundentfourteen,stundentfivteen)
+            arrayOfStundent.map((student, index) => {
+                cardContainer.innerHTML +=
+                    `
+            <div class="insideJsCardContainer">
+                <div class="card col-12 col-lg-3 col-sm-4 col-md-6" style="width: 300px; height="auto">
+                    <img src="info.jpg" class="card-img-top" alt="stundentInfoImg" style="width: 150px; height: 150px; border-radius: 100%;">
+            <div class="card-body">
+            <h5 class="card-title">Stundent Information</h5>
+           <ul>
+                 ${index + 1}
+                <li>First Name:  ${student.firstName}</li>
+                <li>Middle Name: ${student.middleName}</li>
+                <li>Last Name: ${student.lastName}</li>
+                <li>State of Origin:  ${student.state} State<li>
+                <li>Age:  ${student.age} years Old<li>
+                <li>Gender:  ${student.gender} <li>
+                <li>Email:  ${student.email} <li>
+                <li>Course: ${student.course} <li>
+            </ul>
+          
+        </div>
+      </div>
+
+            </div>
+            `
+            })
+            console.log(arrayOfStundent);
+        }
+    </script>
+</body>
+
+</html> -->

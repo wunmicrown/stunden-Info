@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="check()">check</button>
+    <script>
+        class Car {
+            constructor(tyre, model, year){
+
+                this.tyre=tyre;
+                this.model = model;
+                this.year = year;
+            }
+            moving(){
+               console.log(`${this.model} is moving`);
+               alert("i will not give you money");
+               show.innerHTML=`${this.model}is the car and the `
+
+                }
+        }
+
+        let one = new Car ("red", 4, "Nissan 2023")
+        let two = new Car ("blue", 4, "Yaris")
+        console.log(one,two);
+        one.moving();
+        const check =() =>{
+            one.moving();
+        }
+    </script>
+</body>
+</html>
